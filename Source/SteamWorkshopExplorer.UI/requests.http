@@ -1,0 +1,5 @@
+@STEAM_URL=https://steamcommunity.com/app/2171630/workshop/
+
+GET {{STEAM_URL}}
+Accept: application/json
+

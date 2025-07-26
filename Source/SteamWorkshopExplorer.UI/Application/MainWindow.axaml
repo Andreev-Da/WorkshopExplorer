@@ -5,7 +5,7 @@
         x:Class="SteamWorkshopExplorer.Application.MainWindow"
         x:DataType="shared:ViewModelBase"
         Icon="/Assets/avalonia-logo.ico"
-        Title="SteamWorkshopExplorer.UI">
+        Title="WorkshopExplorer.UI">
     
     <Design.DataContext>
         <shared:ViewModelBase/>

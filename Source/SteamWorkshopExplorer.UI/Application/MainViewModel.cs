@@ -1,24 +1,36 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Timers;
 using SteamWorkshopExplorer.Pages;
 using SteamWorkshopExplorer.Shared;
 using SteamWorkshopExplorer.Shared.Routing;
 using CommunityToolkit.Mvvm;
+using CommunityToolkit.Mvvm.ComponentModel;
 
 namespace SteamWorkshopExplorer.Application;
 
 internal partial class MainViewModel : ViewModelBase, IDisposable
 {
     private IRouter<PageViewModel> _router;
-    
+    [ObservableProperty]
+    private string _themeVariant = "Light";
+    private Timer _timer;
+
     public MainViewModel(IRouter<PageViewModel> router)
     {
         _router = router;
         _router.CurrentPageChanged += RouterPageChangedHandler;
+        _timer = new Timer();
+        _timer.Elapsed += (_, _) =>
+        {
+            ThemeVariant = "Dark";
+        };
+        _timer.Interval = TimeSpan.FromSeconds(2).TotalMilliseconds;
+        _timer.Start();
     }
     public PageViewModel ContentViewModel => _router.Current;
-    
-    private void RouterPageChangedHandler(PageViewModel oldPage, PageViewModel newPage)
+
+    private void RouterPageChangedHandler(PageViewModel? oldPage, PageViewModel newPage)
     {
         if (oldPage != newPage)
             OnPropertyChanged(nameof(ContentViewModel));

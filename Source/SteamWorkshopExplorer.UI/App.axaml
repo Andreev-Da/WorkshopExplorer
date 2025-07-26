@@ -1,8 +1,9 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="SteamWorkshopExplorer.App"
              xmlns:app="using:SteamWorkshopExplorer.Application"
-             RequestedThemeVariant="Default">
+             x:Class="SteamWorkshopExplorer.App"
+             x:DataType="app:MainViewModel"
+             RequestedThemeVariant="{Binding ThemeVariant}">
     
     <Application.DataTemplates>
         <app:PageViewLocator/>

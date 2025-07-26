@@ -12,10 +12,4 @@ public partial class MainView : UserControl
     {
         InitializeComponent();
     }
-
-    protected override void OnUnloaded(RoutedEventArgs e)
-    {
-        if (DataContext is MainViewModel vm)
-            vm?.Dispose();
-    }
 }

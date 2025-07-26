@@ -3,5 +3,4 @@
              xmlns:app="using:SteamWorkshopExplorer.Application"
              x:Class="SteamWorkshopExplorer.Application.MainView"
              x:DataType="app:MainViewModel"
-             Content="{Binding ContentViewModel}">
-</UserControl>
+             Content="{Binding ContentViewModel}"/>

@@ -19,14 +19,17 @@ public partial class App : Avalonia.Application
     [UnconditionalSuppressMessage("Trimming", "IL2026:Members annotated with 'RequiresUnreferencedCodeAttribute' require dynamic access otherwise can break functionality when trimming application code", Justification = "<Pending>")]
     public override void OnFrameworkInitializationCompleted()
     {
-        IServiceProvider services = new ApplicationServiceProvider();
+        var services = new ApplicationServiceProvider();
+        var viewModel = services.GetRequiredService<MainViewModel>();
+        
+        DataContext = viewModel;
         
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MainWindow
             {
-                DataContext = services.GetService<MainViewModel>(),
+                DataContext = viewModel,
             };
         }
 
