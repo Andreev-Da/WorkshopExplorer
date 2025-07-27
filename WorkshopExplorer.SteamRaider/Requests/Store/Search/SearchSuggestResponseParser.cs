@@ -48,7 +48,7 @@ public partial class SearchSuggestResponseParser : IResponseParser<List<SearchSu
     /// </summary>
     /// <returns></returns>
     [GeneratedRegex(
-        "<a.*?(?:href=\"(.*?)\").*?>.+?<div.+?match_name.*?>(.*?)</div>.+?<img.+?src=\"(.+?)\".*?>.+?</a>",
+        @"<a.*?(?:href=""(.*?)"").*?>.*?<div.+?match_name.*?>(.*?)</div>.*?<img.*?src=""(.*?)"".*?>.*?</a>",
         RegexOptions.Compiled | RegexOptions.Singleline)]
     private static partial Regex CreateItemRegex();
 }

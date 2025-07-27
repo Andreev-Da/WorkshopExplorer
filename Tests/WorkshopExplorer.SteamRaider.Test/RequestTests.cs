@@ -1,4 +1,5 @@
-﻿using SteamWorkshopExplorer.PageParser;
+﻿using System.Text.Encodings.Web;
+using SteamWorkshopExplorer.PageParser;
 using SteamWorkshopExplorer.PageParser.Models;
 using SteamWorkshopExplorer.PageParser.Requests.Find;
 
@@ -14,14 +15,17 @@ public class RequestTests
         _client = new SteamClient(config);
     }
     
-
+    /// <summary>
+    /// Ленивый тест, просто проверяет что контент находится
+    /// </summary>
     [Theory]
-    public async Task Search()
+    public async Task SearchPalWorldSuggests()
     {
-        SearchSuggestRequest search = new(_client);
+        SearchSuggestsRequest search = new(_client);
         search.Term = "PalWorld";
 
         List<SearchSuggestItem> searchResult = await search.SendAsync();
+        Assert.That(searchResult.Count != 0, "PalWorld not found error");
         
         Assert.Pass();
     }

@@ -10,11 +10,11 @@ namespace SteamWorkshopExplorer.PageParser.Requests.Find;
 
 
 //search/suggest?term=123&f=games&cc=RU&realm=1&l=russian&v=30266810&use_store_query=1&use_search_spellcheck=1&search_creators_and_tags=1
-public sealed class SearchSuggestRequest : BaseSteamRequest<List<SearchSuggestItem>>
+public sealed class SearchSuggestsRequest : BaseSteamRequest<List<SearchSuggestItem>>
 {
     private readonly SteamClient _client;
     
-    public SearchSuggestRequest(SteamClient client) : base()
+    public SearchSuggestsRequest(SteamClient client) : base()
     {
         _client = client;
         Currency = _client.Config.Currency;
