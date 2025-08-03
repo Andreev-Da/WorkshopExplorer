@@ -1,6 +1,10 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:app="using:SteamWorkshopExplorer.Application"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:app="using:SteamWorkshopExplorer.Application"
+			 xmlns:views="clr-namespace:SteamWorkshopExplorer.Shared.Views"
+			 mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SteamWorkshopExplorer.App"
              x:DataType="app:MainViewModel"
              RequestedThemeVariant="{Binding ThemeVariant}">
@@ -11,5 +15,7 @@
   
     <Application.Styles>
         <FluentTheme/>
+        <StyleInclude Source="Shared/Icons/SearchIcon.axaml"/>
+        <StyleInclude Source="Shared/Views/SearchTextBox.axaml"/>
     </Application.Styles>
 </Application>

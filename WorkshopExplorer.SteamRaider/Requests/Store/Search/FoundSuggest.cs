@@ -2,7 +2,7 @@
 
 namespace SteamWorkshopExplorer.PageParser.Models;
 
-public record SearchSuggestItem(
+public record FoundSuggest(
     string Name,
     SteamUrl ReferenceUrl,
     SteamUrl ImageUrl

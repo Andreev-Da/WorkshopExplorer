@@ -2,6 +2,7 @@ using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using SteamWorkshopExplorer.Pages;
+using SteamWorkshopExplorer.Pages.Bitmap;
 using SteamWorkshopExplorer.Pages.HomePage;
 using SteamWorkshopExplorer.Shared;
 
@@ -19,8 +20,10 @@ public class PageViewLocator : IDataTemplate
         // TODO source gen 
         switch (param)
         {
-            case HomePageViewModel vm:
+            case HomePageModel vm:
                 return new HomePageView();
+            case BitmapTestPageModel vm:
+                return new BitmapTestPage();
             default:
                 return new TextBlock { Text = $"Page Not Found: {param?.GetType()?.Name ?? "null"} "};
         }

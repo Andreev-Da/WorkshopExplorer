@@ -5,24 +5,24 @@ using WorkshopExplorer.SteamRaider.Values;
 
 namespace SteamWorkshopExplorer.PageParser.Parsers;
 
-public partial class SearchSuggestResponseParser : IResponseParser<List<SearchSuggestItem>>
+public partial class SearchSuggestResponseParser : IResponseParser<List<FoundSuggest>>
 {
     private static readonly Regex ItemRegex = CreateItemRegex();
 
     public static SearchSuggestResponseParser Instance { get; } = new();
     
-    public async Task<List<SearchSuggestItem>> ParseAsync(HttpResponseMessage response, CancellationToken cancellationToken = default)
+    public async Task<List<FoundSuggest>> ParseAsync(HttpResponseMessage response, CancellationToken cancellationToken = default)
     {
         string content = await response.Content.ReadAsStringAsync(cancellationToken);
         MatchCollection matches = ItemRegex.Matches(content);
 
-        var result = new List<SearchSuggestItem>(matches.Count);
+        var result = new List<FoundSuggest>(matches.Count);
         for (int i = 0; i < matches.Count; i++)
         {
             cancellationToken.ThrowIfCancellationRequested();
             
             GroupCollection matchedGroups = matches[i].Groups;
-            var item = new SearchSuggestItem(
+            var item = new FoundSuggest(
                 matchedGroups[2].Value,
                 new SteamUrl(matchedGroups[1].Value),
                 new SteamUrl(matchedGroups[3].Value)

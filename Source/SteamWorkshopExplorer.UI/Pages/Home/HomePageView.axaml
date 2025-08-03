@@ -1,0 +1,15 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ws="using:SteamWorkshopExplorer.Widgets.Search"
+             xmlns:homePage="using:SteamWorkshopExplorer.Pages.HomePage"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="SteamWorkshopExplorer.Pages.HomePage.HomePageView"
+             x:DataType="homePage:HomePageModel">
+
+    <Grid RowDefinitions="Auto, *">
+        <ws:SearchWidget DataContext="{Binding SearchWidget}" Grid.Row="0" />
+        <TextBlock Grid.Row="1" Text="Content" />
+    </Grid>
+</UserControl>

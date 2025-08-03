@@ -10,7 +10,7 @@ namespace SteamWorkshopExplorer.PageParser.Requests.Find;
 
 
 //search/suggest?term=123&f=games&cc=RU&realm=1&l=russian&v=30266810&use_store_query=1&use_search_spellcheck=1&search_creators_and_tags=1
-public sealed class SearchSuggestsRequest : BaseSteamRequest<List<SearchSuggestItem>>
+public sealed class SearchSuggestsRequest : BaseSteamRequest<List<FoundSuggest>>
 {
     private readonly SteamClient _client;
     
@@ -25,14 +25,27 @@ public sealed class SearchSuggestsRequest : BaseSteamRequest<List<SearchSuggestI
     public string Language { get; set; }
     public string? Term { get; set => SetValueAndNullUri(ref field, in value); }
     
-    public override Task<List<SearchSuggestItem>> SendAsync(CancellationToken cancellationToken = default)
+    public override async Task<List<FoundSuggest>> SendAsync(CancellationToken cancellationToken = default)
     {
-        Uri uri = GetOrCreateUri();
-        return _client.HttpClient.SendAsync(
-            HttpMethod.Get, uri, 
-            SearchSuggestResponseParser.Instance, 
-            cancellationToken
-        );
+        List<FoundSuggest> suggests = new();
+        for(int i = 0; i < Random.Shared.Next(10); i++)
+        {
+            suggests.Add(
+                new FoundSuggest(
+                    $"test{i}",
+                    new("https://store.steampowered.com/app/2426210/Sim_Racing_Telemetry__F1_23?snr=1_7_15__13"),
+                    new("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2426210/b616fd0c99ed9af5f1fba9dc3e8064232375fd10/capsule_231x87.jpg?t=1727977870")
+                )   
+            );
+        }
+
+        return suggests;
+        // Uri uri = GetOrCreateUri();
+        // return _client.HttpClient.SendAsync(
+        //     HttpMethod.Get, uri, 
+        //     SearchSuggestResponseParser.Instance, 
+        //     cancellationToken
+        // );
     }
     
     

@@ -24,7 +24,7 @@ public class RequestTests
         SearchSuggestsRequest search = new(_client);
         search.Term = "PalWorld";
 
-        List<SearchSuggestItem> searchResult = await search.SendAsync();
+        List<FoundSuggest> searchResult = await search.SendAsync();
         Assert.That(searchResult.Count != 0, "PalWorld not found error");
         
         Assert.Pass();

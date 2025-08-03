@@ -1,0 +1,32 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ws="using:SteamWorkshopExplorer.Widgets.Search"
+             xmlns:icons="clr-namespace:SteamWorkshopExplorer.Shared.Icons"
+             xmlns:views="clr-namespace:SteamWorkshopExplorer.Shared.Views"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
+             x:Class="SteamWorkshopExplorer.Widgets.Search.SearchWidget"
+             x:DataType="ws:SearchWidgetModel">
+
+	<StackPanel>
+			<views:SearchTextBox x:Name="SearchInput">
+				<views:SearchTextBox.Icon>
+					<icons:SearchIcon/>
+				</views:SearchTextBox.Icon>
+			</views:SearchTextBox>
+		    <Popup IsOpen="{Binding #SearchInput.IsFocused}">
+				<ListBox ItemsSource="{Binding Suggests}">
+					<ListBox.ItemTemplate>
+						 <DataTemplate>
+							 <StackPanel>
+								 <TextBlock Text="{Binding Name}"/>
+								 <TextBlock Text="{Binding ImageUrl}"/>
+								 <TextBlock Text="{Binding ReferenceUrl}"/>
+							 </StackPanel>
+						 </DataTemplate>
+					</ListBox.ItemTemplate>
+				</ListBox>
+		    </Popup>
+	</StackPanel>
+</UserControl>

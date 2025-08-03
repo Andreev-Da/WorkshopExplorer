@@ -1,0 +1,43 @@
+﻿<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="using:SteamWorkshopExplorer.Shared.Views">
+    
+    <Design.PreviewWith>
+        <controls:SearchTextBox />
+    </Design.PreviewWith>
+
+    <Style Selector="controls|SearchTextBox">
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Border>
+                    <Grid ColumnDefinitions="Auto, *">
+                        <Label Grid.Column="0" 
+                               Content="{TemplateBinding Icon}"/>
+                        <TextBox x:Name="SearchInputBox" Grid.Column="1"/>
+                    </Grid>
+                </Border>
+            </ControlTemplate>
+        </Setter>
+        
+        <Style Selector="^ TextBox">
+            <Setter Property="BorderBrush" Value="{x:Null}"/>
+            <Setter Property="Background" Value="{x:Null}"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Style Selector="^:focus /template/ Border#PART_BorderElement">
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+            </Style>
+            <Style Selector="^:pointerover /template/ Border#PART_BorderElement">
+                <Setter Property="BorderBrush" Value="{x:Null}"/>
+                <Setter Property="Background" Value="{x:Null}"/>
+            </Style>
+        </Style>
+        
+        <Style Selector="^ Border">
+            <Setter Property="CornerRadius" Value="30"/>
+        </Style>
+        
+    </Style>    
+</Styles>
