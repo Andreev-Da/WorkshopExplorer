@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using SteamWorkshopExplorer.Pages.HomePage;
 using SteamWorkshopExplorer.Shared.Routing;
 
 namespace SteamWorkshopExplorer.Pages.Bitmap;
@@ -8,6 +9,6 @@ public partial class BitmapTestPageModel(IRouter<PageViewModel> router) : PageVi
     [RelayCommand]
     private void Swap()
     {
-        router.Push<PageViewModel>();
+        router.Push<HomePageModel>();
     }
 }

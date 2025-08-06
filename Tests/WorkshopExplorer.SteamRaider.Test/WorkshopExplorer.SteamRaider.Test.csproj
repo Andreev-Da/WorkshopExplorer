@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" />
+      <ProjectReference Include="..\..\Source\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" />
     </ItemGroup>
 
 </Project>

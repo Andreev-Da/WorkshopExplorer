@@ -35,7 +35,7 @@
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\..\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" />
+      <ProjectReference Include="..\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" />
     </ItemGroup>
     
     <ItemGroup>
