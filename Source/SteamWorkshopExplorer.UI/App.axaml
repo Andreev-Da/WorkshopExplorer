@@ -14,8 +14,6 @@
     </Application.DataTemplates>
   
     <Application.Styles>
-        <FluentTheme/>
-        <StyleInclude Source="Shared/Icons/SearchIcon.axaml"/>
-        <StyleInclude Source="Shared/Views/SearchTextBox.axaml"/>
+	    <StyleInclude Source="Shared/StyleTheme.axaml"/>
     </Application.Styles>
 </Application>

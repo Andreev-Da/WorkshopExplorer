@@ -10,11 +10,7 @@
              x:DataType="ws:SearchWidgetModel">
 
 	<StackPanel>
-			<views:SearchTextBox x:Name="SearchInput">
-				<views:SearchTextBox.Icon>
-					<icons:SearchIcon/>
-				</views:SearchTextBox.Icon>
-			</views:SearchTextBox>
+			<views:SearchTextBox x:Name="SearchInput"/>
 		    <Popup IsOpen="{Binding #SearchInput.IsFocused}">
 				<ListBox ItemsSource="{Binding Suggests}">
 					<ListBox.ItemTemplate>

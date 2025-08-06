@@ -9,7 +9,9 @@
              x:DataType="homePage:HomePageModel">
 
     <Grid RowDefinitions="Auto, *">
-        <ws:SearchWidget DataContext="{Binding SearchWidget}" Grid.Row="0" />
-        <TextBlock Grid.Row="1" Text="Content" />
+        <ws:SearchWidget  DataContext="{Binding SearchWidget}" Grid.Row="0" />
+        <Button Grid.Row="1" Command="{Binding SwapCommand}">
+            Swap
+        </Button>
     </Grid>
 </UserControl>
