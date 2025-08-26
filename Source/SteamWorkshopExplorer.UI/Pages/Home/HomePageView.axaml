@@ -4,13 +4,15 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:ws="using:SteamWorkshopExplorer.Widgets.Search"
              xmlns:homePage="using:SteamWorkshopExplorer.Pages.HomePage"
+             xmlns:icons="clr-namespace:SteamWorkshopExplorer.Shared.Icons"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="SteamWorkshopExplorer.Pages.HomePage.HomePageView"
              x:DataType="homePage:HomePageModel">
 
-    <Grid RowDefinitions="Auto, *">
-        <TextBlock>HomePage</TextBlock>
-        <Button Grid.Row="1" Command="{Binding SwapCommand}">
+    <Grid RowDefinitions="Auto, *, Auto">
+        <ws:SearchWidget DataContext="{Binding SearchWidget}"/>
+        <TextBlock Grid.Row="1">HomePage</TextBlock>
+        <Button Grid.Row="2" Command="{Binding SwapCommand}">
             Swap
         </Button>
     </Grid>

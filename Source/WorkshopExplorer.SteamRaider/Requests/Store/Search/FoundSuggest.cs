@@ -1,9 +1,17 @@
-﻿using WorkshopExplorer.SteamRaider.Values;
+﻿namespace SteamWorkshopExplorer.PageParser.Models;
 
-namespace SteamWorkshopExplorer.PageParser.Models;
+public enum FoundSuggestType
+{
+    Unknown,
+    App,
+    Tag,
+    Creator,
+}
 
 public record FoundSuggest(
     string Name,
-    SteamUrl ReferenceUrl,
-    SteamUrl ImageUrl
+    string Reference,
+    string Preview,
+    string? Background,
+    FoundSuggestType Tags
 );

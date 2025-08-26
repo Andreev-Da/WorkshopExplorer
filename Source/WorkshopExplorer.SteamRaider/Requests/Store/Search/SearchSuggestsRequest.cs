@@ -33,8 +33,10 @@ public sealed class SearchSuggestsRequest : BaseSteamRequest<List<FoundSuggest>>
             suggests.Add(
                 new FoundSuggest(
                     $"test{i}",
-                    new("https://store.steampowered.com/app/2426210/Sim_Racing_Telemetry__F1_23?snr=1_7_15__13"),
-                    new("https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2426210/b616fd0c99ed9af5f1fba9dc3e8064232375fd10/capsule_231x87.jpg?t=1727977870")
+                    "https://store.steampowered.com/app/2426210/Sim_Racing_Telemetry__F1_23?snr=1_7_15__13",
+                    "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2426210/b616fd0c99ed9af5f1fba9dc3e8064232375fd10/capsule_231x87.jpg?t=1727977870",
+                    null,
+                    FoundSuggestType.App
                 )   
             );
         }
