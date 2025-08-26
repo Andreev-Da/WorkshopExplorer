@@ -12,7 +12,7 @@
 	<StackPanel>
 			<views:SearchTextBox x:Name="SearchInput">
 				<views:SearchTextBox.Icon>
-					<icons:MoreHorizIcon/>
+					<icons:CropOriginalIcon/>
 				</views:SearchTextBox.Icon>
 			</views:SearchTextBox>
 				
