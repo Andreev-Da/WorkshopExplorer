@@ -20,10 +20,10 @@
     </Styles.Resources>
     
     <FluentTheme/>
+    <StyleInclude Source="Views/SearchTextBox.axaml"/>
     <StyleInclude Source="Icons/SearchIcon.axaml"/>
     <StyleInclude Source="Icons/MoreHorizIcon.axaml"/>
     <StyleInclude Source="Icons/CropOriginalIcon.axaml"/>
     <StyleInclude Source="Icons/MoreVertIcon.axaml"/>
-    <StyleInclude Source="Views/SearchTextBox.axaml"/>
-    
+    <StyleInclude Source="Icons/BackIcon.axaml"/>
 </Styles>
