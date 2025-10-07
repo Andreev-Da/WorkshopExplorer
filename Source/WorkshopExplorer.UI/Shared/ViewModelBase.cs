@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 
-namespace SteamWorkshopExplorer.Shared;
+namespace WorkshopExplorer.Shared;
 
 public class ViewModelBase : ObservableObject
 {

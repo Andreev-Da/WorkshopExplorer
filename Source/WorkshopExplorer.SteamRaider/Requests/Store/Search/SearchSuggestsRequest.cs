@@ -1,12 +1,7 @@
-﻿using System.Diagnostics.CodeAnalysis;
-using System.Text;
+﻿using System.Text;
 using System.Web;
-using SteamWorkshopExplorer.PageParser.Models;
-using SteamWorkshopExplorer.PageParser.Parsers;
-using WorkshopExplorer.SteamRaider;
-using WorkshopExplorer.SteamRaider.Requests;
 
-namespace SteamWorkshopExplorer.PageParser.Requests.Find;
+namespace WorkshopExplorer.SteamRaider.Requests.Store.Search;
 
 
 //search/suggest?term=123&f=games&cc=RU&realm=1&l=russian&v=30266810&use_store_query=1&use_search_spellcheck=1&search_creators_and_tags=1

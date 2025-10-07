@@ -1,8 +1,6 @@
-using Avalonia;
 using Avalonia.Controls;
-using Avalonia.Input;
 
-namespace SteamWorkshopExplorer.Application;
+namespace WorkshopExplorer.Application;
 
 public partial class MainWindow : Window
 {

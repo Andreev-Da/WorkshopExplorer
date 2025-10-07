@@ -1,4 +1,4 @@
-﻿namespace SteamWorkshopExplorer.PageParser.Parsers;
+﻿namespace WorkshopExplorer.SteamRaider;
 
 internal interface IResponseParser<T>
 {

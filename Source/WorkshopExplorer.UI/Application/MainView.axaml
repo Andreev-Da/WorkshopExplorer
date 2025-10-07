@@ -1,8 +1,8 @@
 ﻿<UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-			 xmlns:app="using:SteamWorkshopExplorer.Application"
-             x:Class="SteamWorkshopExplorer.Application.MainView"
-             x:DataType="app:MainViewModel">
+			 xmlns:application="clr-namespace:WorkshopExplorer.Application"
+			 x:Class="WorkshopExplorer.Application.MainView"
+             x:DataType="application:MainViewModel">
 	<StackPanel>
 		<ContentControl Content="{Binding ContentViewModel}"/>
 	</StackPanel>

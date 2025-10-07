@@ -1,8 +1,6 @@
 ﻿using Avalonia.Controls;
-using Avalonia.Controls.Primitives;
-using Avalonia.LogicalTree;
 
-namespace SteamWorkshopExplorer.Widgets.Search;
+namespace WorkshopExplorer.Widgets.Search;
 
 public partial class SearchWidget : UserControl
 {

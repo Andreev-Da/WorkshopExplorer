@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SteamWorkshopExplorer.Shared.Routing;
+namespace WorkshopExplorer.Shared.Routing;
 
 public record SimpleRouterConfig(
     Type HomePageType

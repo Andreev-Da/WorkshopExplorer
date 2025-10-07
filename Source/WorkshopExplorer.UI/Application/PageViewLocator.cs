@@ -1,12 +1,10 @@
-using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using SteamWorkshopExplorer.Pages;
-using SteamWorkshopExplorer.Pages.Bitmap;
-using SteamWorkshopExplorer.Pages.HomePage;
-using SteamWorkshopExplorer.Shared;
+using WorkshopExplorer.Pages;
+using WorkshopExplorer.Pages.Bitmap;
+using WorkshopExplorer.Pages.Home;
 
-namespace SteamWorkshopExplorer.Application;
+namespace WorkshopExplorer.Application;
 
 public class PageViewLocator : IDataTemplate
 {

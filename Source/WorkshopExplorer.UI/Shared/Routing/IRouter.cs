@@ -1,7 +1,6 @@
 ﻿using System;
-using System.ComponentModel;
 
-namespace SteamWorkshopExplorer.Shared.Routing;
+namespace WorkshopExplorer.Shared.Routing;
 
 public delegate void PageChangedEventHandler<in TViewModel>(TViewModel? oldPage, TViewModel newPage);
 

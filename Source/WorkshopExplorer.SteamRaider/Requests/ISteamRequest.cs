@@ -1,4 +1,4 @@
-﻿namespace WorkshopExplorer.SteamRaider;
+﻿namespace WorkshopExplorer.SteamRaider.Requests;
 
 public interface ISteamRequest<T>
 {

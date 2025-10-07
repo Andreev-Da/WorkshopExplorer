@@ -2,7 +2,7 @@
 using Avalonia;
 using HotAvalonia;
 
-namespace SteamWorkshopExplorer;
+namespace WorkshopExplorer;
 
 sealed class Program
 {
@@ -16,8 +16,12 @@ sealed class Program
     // Avalonia configuration, don't remove; also used by visual designer.
     public static AppBuilder BuildAvaloniaApp()
     {
+        bool overlayPopups = true;
         return AppBuilder.Configure<App>()
             .UsePlatformDetect()
+            .With(new Win32PlatformOptions { OverlayPopups = overlayPopups })
+            .With(new X11PlatformOptions { OverlayPopups = overlayPopups })
+            .With(new AvaloniaNativePlatformOptions { OverlayPopups = overlayPopups })
             .WithInterFont()
             .LogToTrace();
     }

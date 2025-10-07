@@ -1,8 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Markup.Xaml;
+﻿using Avalonia.Controls;
 
-namespace SteamWorkshopExplorer.Pages.HomePage;
+namespace WorkshopExplorer.Pages.Home;
 
 public partial class HomePageView : UserControl
 {

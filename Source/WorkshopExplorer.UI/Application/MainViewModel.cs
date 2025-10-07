@@ -1,13 +1,11 @@
 ﻿using System;
-using System.ComponentModel;
 using System.Timers;
-using SteamWorkshopExplorer.Pages;
-using SteamWorkshopExplorer.Shared;
-using SteamWorkshopExplorer.Shared.Routing;
-using CommunityToolkit.Mvvm;
 using CommunityToolkit.Mvvm.ComponentModel;
+using WorkshopExplorer.Pages;
+using WorkshopExplorer.Shared;
+using WorkshopExplorer.Shared.Routing;
 
-namespace SteamWorkshopExplorer.Application;
+namespace WorkshopExplorer.Application;
 
 internal partial class MainViewModel : ViewModelBase, IDisposable
 {

@@ -1,4 +1,4 @@
-﻿namespace SteamWorkshopExplorer.PageParser.Models;
+﻿namespace WorkshopExplorer.SteamRaider.Requests.Store.Search;
 
 public enum FoundSuggestType
 {

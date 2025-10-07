@@ -1,6 +1,6 @@
-﻿using SteamWorkshopExplorer.Shared;
+﻿using WorkshopExplorer.Shared;
 
-namespace SteamWorkshopExplorer.Pages;
+namespace WorkshopExplorer.Pages;
 
 public class PageViewModel : ViewModelBase
 {

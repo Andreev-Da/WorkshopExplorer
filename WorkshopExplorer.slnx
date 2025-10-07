@@ -5,8 +5,8 @@
   <Folder Name="/Solution Items/Source/">
     <File Path="Source\Directory.Build.props" />
   </Folder>
-  <Project Path="Source\WorkshopExplorer.UI\WorkshopExplorer.UI.csproj" Type="Classic C#" />
-  <Project Path="Source\WorkshopExplorer.StartApp\WorkshopExplorer.StartApp.csproj" Type="Classic C#" />
+  <Project Path="Source\WorkshopExplorer.Desktop\WorkshopExplorer.Desktop.csproj" Type="Classic C#" />
   <Project Path="Source\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" Type="Classic C#" />
+  <Project Path="Source\WorkshopExplorer.UI\WorkshopExplorer.UI.csproj" Type="Classic C#" />
   <Project Path="Tests\WorkshopExplorer.SteamRaider.Test\WorkshopExplorer.SteamRaider.Test.csproj" Type="Classic C#" />
 </Solution>

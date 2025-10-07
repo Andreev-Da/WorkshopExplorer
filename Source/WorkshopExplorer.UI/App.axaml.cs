@@ -1,14 +1,14 @@
-using System;
-using System.Linq;
 using System.Diagnostics.CodeAnalysis;
-using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
-using CommunityToolkit.Mvvm.Input;
-using SteamWorkshopExplorer.Application;
+using Microsoft.Extensions.DependencyInjection;
+using ApplicationServiceProvider = WorkshopExplorer.Application.ApplicationServiceProvider;
+using MainViewModel = WorkshopExplorer.Application.MainViewModel;
+using MainWindow = WorkshopExplorer.Application.MainWindow;
 
-namespace SteamWorkshopExplorer;
+namespace WorkshopExplorer;
 
 public partial class App : Avalonia.Application
 {

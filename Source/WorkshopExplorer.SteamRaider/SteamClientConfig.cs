@@ -1,4 +1,4 @@
-﻿namespace SteamWorkshopExplorer.PageParser;
+﻿namespace WorkshopExplorer.SteamRaider;
 
 public record SteamClientConfig(
     string Currency = "RU", //cc

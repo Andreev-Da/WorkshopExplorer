@@ -1,7 +1,5 @@
 ﻿using System.Text.Encodings.Web;
-using SteamWorkshopExplorer.PageParser;
-using SteamWorkshopExplorer.PageParser.Models;
-using SteamWorkshopExplorer.PageParser.Requests.Find;
+using WorkshopExplorer.SteamRaider.Requests.Store.Search;
 
 namespace WorkshopExplorer.SteamRaider.Test;
 

@@ -1,8 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.Input;
-using SteamWorkshopExplorer.Pages.HomePage;
-using SteamWorkshopExplorer.Shared.Routing;
+using WorkshopExplorer.Shared.Routing;
+using HomePageModel = WorkshopExplorer.Pages.Home.HomePageModel;
 
-namespace SteamWorkshopExplorer.Pages.Bitmap;
+namespace WorkshopExplorer.Pages.Bitmap;
 
 public partial class BitmapTestPageModel(IRouter<PageViewModel> router) : PageViewModel
 {

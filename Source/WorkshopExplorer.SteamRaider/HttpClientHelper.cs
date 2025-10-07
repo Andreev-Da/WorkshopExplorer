@@ -1,6 +1,4 @@
-﻿using SteamWorkshopExplorer.PageParser.Parsers;
-
-namespace WorkshopExplorer.SteamRaider;
+﻿namespace WorkshopExplorer.SteamRaider;
 
 internal static class HttpClientHelper
 {

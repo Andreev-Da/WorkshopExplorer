@@ -1,8 +1,6 @@
 ﻿using System.Text.RegularExpressions;
-using System.Runtime.CompilerServices;
-using SteamWorkshopExplorer.PageParser.Models;
 
-namespace SteamWorkshopExplorer.PageParser.Parsers;
+namespace WorkshopExplorer.SteamRaider.Requests.Store.Search;
 
 public partial class SearchSuggestResponseParser : IResponseParser<List<FoundSuggest>>
 {

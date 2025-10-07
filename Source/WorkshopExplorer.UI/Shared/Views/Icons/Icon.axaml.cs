@@ -4,7 +4,7 @@ using Avalonia.Controls.Primitives;
 using Avalonia.Media;
 using Avalonia.Metadata;
 
-namespace SteamWorkshopExplorer.Shared.Icons;
+namespace WorkshopExplorer.Shared.Views.Icons;
 
 public class Icon : TemplatedControl
 {

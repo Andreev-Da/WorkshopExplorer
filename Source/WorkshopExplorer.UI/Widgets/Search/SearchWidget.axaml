@@ -2,20 +2,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 			 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:ws="using:SteamWorkshopExplorer.Widgets.Search"
-             xmlns:icons="clr-namespace:SteamWorkshopExplorer.Shared.Icons"
-             xmlns:views="clr-namespace:SteamWorkshopExplorer.Shared.Views"
+             xmlns:views="clr-namespace:WorkshopExplorer.Shared.Views"
+             xmlns:search="clr-namespace:WorkshopExplorer.Widgets.Search"
+             xmlns:icons="clr-namespace:WorkshopExplorer.Shared.Views.Icons"
              mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="200"
-             x:Class="SteamWorkshopExplorer.Widgets.Search.SearchWidget"
-             x:DataType="ws:SearchWidgetModel">
+             x:Class="WorkshopExplorer.Widgets.Search.SearchWidget"
+             x:DataType="search:SearchWidgetModel">
 
 	<StackPanel>
-			<views:SearchTextBox x:Name="SearchInput">
-				<views:SearchTextBox.Icon>
-					<icons:CropOriginalIcon/>
-				</views:SearchTextBox.Icon>
-			</views:SearchTextBox>
-				
+			<views:SearchTextBox x:Name="SearchInput"/>
 		    <Popup IsOpen="{Binding #SearchInput.IsFocused}">
 				<ListBox ItemsSource="{Binding Suggests}">
 					<ListBox.ItemTemplate>

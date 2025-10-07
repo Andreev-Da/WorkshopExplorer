@@ -1,6 +1,6 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:icons="clr-namespace:SteamWorkshopExplorer.Shared.Icons">
+        xmlns:icons="clr-namespace:WorkshopExplorer.Shared.Views.Icons">
     <Design.PreviewWith>
         <StackPanel Margin="20">
             <icons:BackIcon/>

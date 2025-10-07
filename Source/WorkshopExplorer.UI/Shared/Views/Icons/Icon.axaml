@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="https://github.com/avaloniaui"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:controls="using:SteamWorkshopExplorer.Shared.Icons">
+                    xmlns:controls="using:WorkshopExplorer.Shared.Views.Icons">
     <ControlTheme x:Key="{x:Type controls:Icon}" 
                   TargetType="controls:Icon">
         <Setter Property="Fill" Value="{DynamicResource SystemAccentColor}"/>

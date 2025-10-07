@@ -5,12 +5,11 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
-using SteamWorkshopExplorer.PageParser.Models;
-using SteamWorkshopExplorer.PageParser.Requests.Find;
-using SteamWorkshopExplorer.Shared;
+using WorkshopExplorer.Shared;
 using WorkshopExplorer.SteamRaider;
+using WorkshopExplorer.SteamRaider.Requests.Store.Search;
 
-namespace SteamWorkshopExplorer.Widgets.Search;
+namespace WorkshopExplorer.Widgets.Search;
 
 public partial class SearchWidgetModel(SteamClient steamClient) : ViewModelBase
 {

@@ -4,7 +4,7 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
-        <RootNamespace>SteamWorkshopExplorer</RootNamespace>
+        <RootNamespace>WorkshopExplorer</RootNamespace>
 		<IsTrimmable>True</IsTrimmable>
         <LangVersion>preview</LangVersion>
     </PropertyGroup>

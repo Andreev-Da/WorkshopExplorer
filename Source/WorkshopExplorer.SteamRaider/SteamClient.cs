@@ -1,6 +1,4 @@
-﻿using SteamWorkshopExplorer.PageParser;
-
-namespace WorkshopExplorer.SteamRaider;
+﻿namespace WorkshopExplorer.SteamRaider;
 
 public class SteamClient
 {

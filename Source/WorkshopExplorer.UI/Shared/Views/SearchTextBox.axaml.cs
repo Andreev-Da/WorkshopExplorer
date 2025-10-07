@@ -1,12 +1,6 @@
-﻿using Avalonia;
-using Avalonia.Controls;
-using Avalonia.Controls.Metadata;
-using Avalonia.Controls.Primitives;
-using Avalonia.LogicalTree;
-using Avalonia.Metadata;
-using SteamWorkshopExplorer.Shared.Icons;
+﻿using WorkshopExplorer.Shared.Views.Icons;
 
-namespace SteamWorkshopExplorer.Shared.Views;
+namespace WorkshopExplorer.Shared.Views;
 
 public class SearchTextBox : TemplatedControl
 {

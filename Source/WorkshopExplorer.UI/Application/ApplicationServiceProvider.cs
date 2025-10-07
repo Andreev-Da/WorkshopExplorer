@@ -1,14 +1,13 @@
 ﻿using System;
 using Jab;
-using SteamWorkshopExplorer.PageParser;
-using SteamWorkshopExplorer.Pages;
-using SteamWorkshopExplorer.Pages.Bitmap;
-using SteamWorkshopExplorer.Pages.HomePage;
-using SteamWorkshopExplorer.Shared.Routing;
-using SteamWorkshopExplorer.Widgets.Search;
+using WorkshopExplorer.Pages;
+using WorkshopExplorer.Pages.Bitmap;
+using WorkshopExplorer.Pages.Home;
+using WorkshopExplorer.Shared.Routing;
 using WorkshopExplorer.SteamRaider;
+using WorkshopExplorer.Widgets.Search;
 
-namespace SteamWorkshopExplorer.Application;
+namespace WorkshopExplorer.Application;
 
 [ServiceProvider]
 [Singleton<SteamClient>(Factory = nameof(SteamClientFactory))]

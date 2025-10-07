@@ -1,11 +1,8 @@
 ﻿using System;
-using System.ComponentModel;
-using System.Diagnostics.CodeAnalysis;
 using Microsoft.Extensions.DependencyInjection;
-using SteamWorkshopExplorer.Pages;
-using SteamWorkshopExplorer.Pages.HomePage;
+using WorkshopExplorer.Pages;
 
-namespace SteamWorkshopExplorer.Shared.Routing;
+namespace WorkshopExplorer.Shared.Routing;
 
 /// <summary>
 /// Простой роутер, без реализации истории маршрутизации, из-за чего Push работает аналогично Replace 

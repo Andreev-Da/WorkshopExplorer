@@ -1,13 +1,11 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using SteamWorkshopExplorer.Pages.Bitmap;
-using SteamWorkshopExplorer.Shared.Routing;
-using SteamWorkshopExplorer.Widgets.Search;
+using WorkshopExplorer.Pages.Bitmap;
+using WorkshopExplorer.Shared.Routing;
+using WorkshopExplorer.Widgets.Search;
 
-namespace SteamWorkshopExplorer.Pages.HomePage;
+namespace WorkshopExplorer.Pages.Home;
 
 public partial class HomePageModel(IRouter<PageViewModel> router, SearchWidgetModel searchWidget) : PageViewModel
 {

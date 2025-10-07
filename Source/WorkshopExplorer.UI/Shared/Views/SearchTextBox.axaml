@@ -1,6 +1,6 @@
 ﻿<Styles xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:controls="using:SteamWorkshopExplorer.Shared.Views">
+        xmlns:controls="using:WorkshopExplorer.Shared.Views">
     
     <Design.PreviewWith>
         <controls:SearchTextBox Width="300" Height="30"/>

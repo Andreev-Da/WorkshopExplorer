@@ -1,10 +1,6 @@
-﻿using System;
-using System.IO;
-using System.IO.Compression;
-using System.Linq;
-using Avalonia.Controls;
+﻿using Avalonia.Controls;
 
-namespace SteamWorkshopExplorer.Pages.Bitmap;
+namespace WorkshopExplorer.Pages.Bitmap;
 
 public partial class BitmapTestPage : UserControl
 {
