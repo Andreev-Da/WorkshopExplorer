@@ -23,7 +23,7 @@ internal partial class ApplicationServiceProvider : IServiceProvider
         SimpleRouterConfig config = new SimpleRouterConfig(
             HomePageType: typeof(HomePageModel)
         );
-        return new SimpleRouter(services, config);
+        return new SimpleRouter<PageViewModel>(services, config);
     }
 
     public static SteamClient SteamClientFactory(IServiceProvider services)

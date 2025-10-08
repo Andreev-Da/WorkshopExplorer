@@ -4,17 +4,11 @@ namespace WorkshopExplorer.Shared.Routing;
 
 public delegate void PageChangedEventHandler<in TViewModel>(TViewModel? oldPage, TViewModel newPage);
 
-public interface IRouter<TViewModel>
-    where TViewModel : ViewModelBase
+public interface IRouter<TPage> where TPage : ViewModelBase
 {
-    
-    TViewModel Current { get; }
-
-    event PageChangedEventHandler<TViewModel> CurrentPageChanged;
-    
-    public void Push<TPage>() where TPage : TViewModel;
-    public void Replace<TPage>() where TPage : TViewModel;
-    
-    public void Push<TPage>(Action<TPage> action) where TPage : TViewModel;
-    public void Replace<TPage>(Action<TPage> initializer) where TPage : TViewModel;
+    event PageChangedEventHandler<TPage> CurrentPageChanged;
+    TPage Current { get; }
+ 
+    public void Push<TNewPage>(Action<TNewPage>? initializer = null) where TNewPage : TPage;
+    public void Replace<TNewPage>(Action<TNewPage>? initializer = null) where TNewPage : TPage;
 }

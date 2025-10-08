@@ -7,31 +7,32 @@ namespace WorkshopExplorer.Shared.Routing;
 /// <summary>
 /// Простой роутер, без реализации истории маршрутизации, из-за чего Push работает аналогично Replace 
 /// </summary>
-public partial class SimpleRouter: IRouter<PageViewModel>
+public partial class SimpleRouter<TPage>: IRouter<TPage>
+    where TPage : ViewModelBase
 {
     private readonly IServiceProvider _services;
     private readonly Type _homePage;
     
-    private PageViewModel? _current;
+    private TPage? _current;
     
     public SimpleRouter(IServiceProvider services, SimpleRouterConfig config)
     {
-        if (!config.HomePageType.IsAssignableTo(typeof(PageViewModel)))
-            throw new ArgumentException($"{nameof(config.HomePageType)} must be assignable to PageViewModel");
+        if (!config.HomePageType.IsAssignableTo(typeof(TPage)))
+            throw new ArgumentException($"{nameof(config.HomePageType)} must be assignable to TPage");
         
         _services = services;
         _homePage = config.HomePageType;
     }
 
-    public PageViewModel Current
+    public TPage Current
     {
         get => GetCurrentPageOrInitValue(); 
         private set => SetCurrentPageAndRiseEvent(value);
     }
     
-    private PageViewModel GetCurrentPageOrInitValue()
+    private TPage GetCurrentPageOrInitValue()
     {
-        _current ??= _services.GetRequiredService(_homePage) as PageViewModel;
+        _current ??= _services.GetRequiredService(_homePage) as TPage;
         
         if (_current == null)
             throw new InvalidOperationException("The page was not found, although it should have been.");
@@ -39,37 +40,23 @@ public partial class SimpleRouter: IRouter<PageViewModel>
         return _current;
     }
     
-    private void SetCurrentPageAndRiseEvent(PageViewModel value)
+    private void SetCurrentPageAndRiseEvent(TPage value)
     {
-        PageViewModel? old = _current;
+        TPage? old = _current;
         _current = value;
         
         CurrentPageChanged?.Invoke(old, value);
     }
 
-    public event PageChangedEventHandler<PageViewModel>? CurrentPageChanged;
-    
-    public void Push<TPage>() where TPage : PageViewModel
-        => Replace<TPage>();
-    
-    public void Replace<TPage>() where TPage : PageViewModel
-        => ReplaceInternal(_services.GetRequiredService<TPage>());
+    public event PageChangedEventHandler<TPage>? CurrentPageChanged;
 
-    public void Push<TPage>(Action<TPage> initializer) where TPage : PageViewModel
+    public void Push<TNewPage>(Action<TNewPage>? initializer) where TNewPage : TPage
         => Replace(initializer);
     
-    public void Replace<TPage>(Action<TPage> initializer) where TPage : PageViewModel
+    public void Replace<TNewPage>(Action<TNewPage>? initializer) where TNewPage : TPage
     {
-        ArgumentNullException.ThrowIfNull(initializer);
-        
-        TPage page = _services.GetRequiredService<TPage>();
-        initializer(page);
-        
-        ReplaceInternal(page);
-    }
-    
-    private void ReplaceInternal(PageViewModel page)
-    {
+        TNewPage page = _services.GetRequiredService<TNewPage>();
+        initializer?.Invoke(page);
         Current = page;
     }
 }

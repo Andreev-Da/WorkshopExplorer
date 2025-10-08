@@ -2,6 +2,7 @@
 using System.Timers;
 using CommunityToolkit.Mvvm.ComponentModel;
 using WorkshopExplorer.Pages;
+using WorkshopExplorer.Pages.Home;
 using WorkshopExplorer.Shared;
 using WorkshopExplorer.Shared.Routing;
 

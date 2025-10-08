@@ -1,6 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.Input;
+using WorkshopExplorer.Pages.Home;
 using WorkshopExplorer.Shared.Routing;
-using HomePageModel = WorkshopExplorer.Pages.Home.HomePageModel;
 
 namespace WorkshopExplorer.Pages.Bitmap;
 

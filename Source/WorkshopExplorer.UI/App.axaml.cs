@@ -5,9 +5,6 @@ using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
 using WorkshopExplorer.Application;
-using ApplicationServiceProvider = WorkshopExplorer.Application.ApplicationServiceProvider;
-using MainViewModel = WorkshopExplorer.Application.MainViewModel;
-using MainWindow = WorkshopExplorer.Application.MainWindow;
 
 namespace WorkshopExplorer;
 
