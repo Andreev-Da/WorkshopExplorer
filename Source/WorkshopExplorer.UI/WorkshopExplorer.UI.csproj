@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
         <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
         <RootNamespace>WorkshopExplorer</RootNamespace>
-		<IsTrimmable>True</IsTrimmable>
+        <IsAotCompatible>true</IsAotCompatible>
         <LangVersion>preview</LangVersion>
     </PropertyGroup>
     
@@ -13,9 +13,8 @@
         <AvaloniaResource Include="Assets\**"/>
     </ItemGroup>
 
-    <ItemGroup><!-- Preserve Avalonia types for reflection -->
-        <!-- <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" /> -->
-    
+    <ItemGroup>
+      <TrimmerRootAssembly Include="Avalonia.Themes.Fluent" />
       <AdditionalFiles Include="Shared\Views\Icons\BackIcon.axaml" />
       <AdditionalFiles Include="Shared\Views\Icons\CropOriginalIcon.axaml" />
       <AdditionalFiles Include="Shared\Views\Icons\Icon.axaml" />
@@ -26,18 +25,19 @@
     </ItemGroup>
     
     <ItemGroup>
-        <PackageReference Include="Avalonia" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Themes.Fluent" Version="11.2.1"/>
-        <PackageReference Include="Avalonia.Fonts.Inter" Version="11.2.1"/>
+        <PackageReference Include="Avalonia"/>
+        <PackageReference Include="Avalonia.Themes.Fluent"/>
+        <PackageReference Include="Avalonia.Fonts.Inter"/>
         <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-        <PackageReference Include="Avalonia.Diagnostics" Version="11.2.1"/>
-        <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.1"/>
-        <PackageReference Include="Jab" Version="0.11.0" />		
-        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="9.0.7" />
+        <PackageReference Include="Avalonia.Diagnostics"/>
+        <PackageReference Include="SkiaSharp"/>
+        <PackageReference Include="CommunityToolkit.Mvvm"/>
+        <PackageReference Include="Jab"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions"/>
     </ItemGroup>
     
     <ItemGroup>
-      <ProjectReference Include="..\WorkshopExplorer.SteamRaider\WorkshopExplorer.SteamRaider.csproj" />
+      <ProjectReference Include="..\WorkshopExplorer.SteamRider\WorkshopExplorer.SteamRider.csproj" />
     </ItemGroup>
     
     <ItemGroup>

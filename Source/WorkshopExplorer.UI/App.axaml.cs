@@ -4,6 +4,7 @@ using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Data.Core.Plugins;
 using Avalonia.Markup.Xaml;
 using Microsoft.Extensions.DependencyInjection;
+using WorkshopExplorer.Application;
 using ApplicationServiceProvider = WorkshopExplorer.Application.ApplicationServiceProvider;
 using MainViewModel = WorkshopExplorer.Application.MainViewModel;
 using MainWindow = WorkshopExplorer.Application.MainWindow;
@@ -23,12 +24,17 @@ public partial class App : Avalonia.Application
         var services = new ApplicationServiceProvider();
         var viewModel = services.GetRequiredService<MainViewModel>();
         
-        DataContext = viewModel;
-        
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             DisableAvaloniaDataAnnotationValidation();
             desktop.MainWindow = new MainWindow
+            {
+                DataContext = viewModel,
+            };
+        }
+        else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
+        {
+            singleViewPlatform.MainView = new MainView
             {
                 DataContext = viewModel,
             };

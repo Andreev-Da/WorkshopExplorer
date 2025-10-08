@@ -1,5 +1,0 @@
-<Project>
-    <ItemGroup>
-        <PackageReference Include="HotAvalonia" Version="3.0.0" PrivateAssets="All"  Publish="True"/>
-    </ItemGroup>
-</Project>

@@ -1,0 +1,8 @@
+<Project>   
+    <PropertyGroup>
+        <IsAotCompatible>True</IsAotCompatible>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="HotAvalonia" PrivateAssets="All"  Publish="True"/>
+    </ItemGroup>
+</Project>
